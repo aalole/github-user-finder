@@ -4,6 +4,7 @@ class UI {
   }
 
   showProfile(user) {
+    const createdAt = user.created_at.slice(0, 10);
     this.profile.innerHTML = `
         <div class="card card-body mb-3">
         <div class="row">
@@ -22,7 +23,7 @@ class UI {
                     <li class="list-group-item">Company: ${user.company} </li>
                     <li class="list-group-item">Website/Blog: ${user.blog} </li>
                     <li class="list-group-item">Location: ${user.location} </li>
-                    <li class="list-group-item">Member Since: ${user.created_at} </li>
+                    <li class="list-group-item">Member Since: ${createdAt} </li>
                 </ul>
             </div>
         </div>

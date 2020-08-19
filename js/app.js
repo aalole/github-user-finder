@@ -10,13 +10,13 @@ searchUser.addEventListener("keyup", (e) => {
     // console.log(userInput)
     // make http call
     github.getUser(userInput).then((data) => {
-      //   console.log(data);
+     
       if (data.profile.message === "Not Found") {
         //alert Not Found
         ui.showAlert("User not found", "alert alert-danger");
       } else {
-		ui.showProfile(data.profile);
-		ui.showRepos(data.repos)
+        ui.showProfile(data.profile);
+        ui.showRepos(data.repos);
       }
     });
   } else {
