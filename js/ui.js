@@ -75,7 +75,7 @@ class UI {
     setTimeout(() => {
       this.clearAlert();
     }, 3000);
-  }
+  };
   clearAlert() {
     const currentAlert = document.querySelector(".alert");
     if (currentAlert) {
